@@ -3,13 +3,12 @@
 using namespace std;
 
 int main() {
-    int num;
-    cin>>num;
-    int count=0;
-    while(num>0){
-        num = num &num-1;
-        count++;
+  
+    int singleNumber(vector<int>& nums) {
+        int num=0;
+        for(int i:nums){
+            num = num^i;
+        }
+        return num;
     }
-    cout<<count;
-
 }
